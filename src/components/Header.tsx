@@ -35,9 +35,10 @@ const Header = ({ onScpSelect, selectedScp }: HeaderProps) => {
 
   const scpObjects = [
     { id: "xxx", name: "SCP-XXX", subtitle: "Полуночный Посетитель" },
-    { id: "173", name: "SCP-173", subtitle: "Скульптура" },
-    { id: "096", name: "SCP-096", subtitle: "Застенчивый парень" },
-    { id: "682", name: "SCP-682", subtitle: "Неуязвимая рептилия" },
+    { id: "xxxx", name: "SCP-XXXX", subtitle: "Карточник" },
+    { id: "yyyy", name: "SCP-YYYY", subtitle: "Черный Волк" },
+    { id: "zzzz", name: "SCP-████", subtitle: "Полуденные Игрища" },
+    { id: "yyyy-a", name: "SCP-YYYY-A", subtitle: "Энгельсский Диалект" },
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
