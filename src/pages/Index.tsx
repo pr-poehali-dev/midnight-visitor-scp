@@ -12,6 +12,7 @@ import Header from "@/components/Header";
 
 const Index = () => {
   const [selectedScp, setSelectedScp] = useState("xxx");
+  const [currentUser, setCurrentUser] = useState<{ name: string; email: string; role: string } | null>(null);
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     containment: true,
     description: true,
@@ -25,7 +26,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header onScpSelect={setSelectedScp} selectedScp={selectedScp} />
+      <Header 
+        onScpSelect={setSelectedScp} 
+        selectedScp={selectedScp}
+        onUserLogin={setCurrentUser}
+        currentUser={currentUser}
+      />
       <Alert className="border-accent bg-accent/10 m-6 rounded-sm">
         <Icon name="ShieldAlert" className="h-5 w-5 text-accent" />
         <AlertDescription className="text-accent font-mono text-sm ml-6">
